@@ -240,6 +240,59 @@ ul {
 }
 /* END aspirations */
 
+/* START our-success */
+.our-success {
+    padding: 100px 0;
+}
+.our-success .first h3 {
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--main-color);
+}
+.our-success .first p {
+    font-weight: 18px;
+    font-size: 400;
+    color: var(--main-color);
+}
+.our-success .wahed-row {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.our-success .wahed-row .box {
+    border: 1px solid var(--main-color);
+    border-radius: 16px;
+    padding: 32px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+.our-success .wahed-row .box .h4 {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 24px;
+}
+.our-success .wahed-row .box .title {
+    font-size: 22px;
+    font-size: 600;
+    color: var(--main-color);
+}
+.our-success .wahed-row .box .details {
+    font-weight: 600;
+    background-color: transparent;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 1px solid var(--main-color);
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    color: var(--main-color);
+    padding: 7px 14px;
+}
+/* END our-success */
+
 /* MEDIA 991px */
 @media (max-width: 991px) {
     .nav-3,
@@ -289,6 +342,9 @@ ul {
     .cta-aspirations p {
         font-size: 20px;
     }
+    .our-success .wahed-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 991px) {
@@ -307,7 +363,11 @@ ul {
         font-size: 19px;
     }
 }
-
+@media (max-width: 768px) {
+    .our-success .wahed-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 .donation {
     position: fixed;
     top: 300px;
