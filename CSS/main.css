@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+    --main-color: #255a4d;
+}
+
+body {
+    background-color: #f8f4e7;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    height: 3000px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    margin: 0 !important;
+    padding: 0;
+}
+.wahed-btn {
+    padding: 10px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 185px;
+    font-size: 16px;
+}
+
+/* START NAVBAR */
+.nav-1 {
+    padding: 20px 0;
+}
+.nav-1 a {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+.nav-1 i {
+    font-size: 16px;
+}
+.nav-2 {
+    padding: 30px 0;
+    background-color: var(--main-color);
+    position: relative;
+    transition: 5s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+}
+.nav-2.active {
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.nav-2 a {
+    color: #fff;
+    font-size: 16px;
+}
+.nav-2 .dropdown {
+    position: relative;
+}
+.nav-2 .dropdown ul {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    text-align: center;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    opacity: 0;
+}
+.nav-2 .dropdown:hover ul {
+    height: 200px;
+    opacity: 1;
+}
+.nav-3 {
+    display: none;
+    padding: 20px;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+.nav-3.active {
+    box-shadow: #255a4d;
+    position: fixed;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.nav-3 .bars i {
+    font-size: 30px;
+    cursor: pointer;
+}
+.nav-4 {
+    display: none;
+}
+/* END NAVBAR */
+
+/* MEDIA 991px */
+@media (max-width: 991px) {
+    .nav-3,
+    .nav-4 {
+        display: block;
+    }
+    .nav-4 {
+        background-color: #255a4d71;
+        position: fixed;
+        top: 0;
+        display: flex;
+        height: 100vh;
+        width: 200px;
+        padding: 30px 30px 0 0;
+        right: -1000px;
+        transition: 0.3s linear;
+        -webkit-transition: 0.3s linear;
+        -moz-transition: 0.3s linear;
+        -ms-transition: 0.3s linear;
+        -o-transition: 0.3s linear;
+    }
+    .nav-4.active {
+        transition: 0.3s linear;
+        -webkit-transition: 0.3s linear;
+        -moz-transition: 0.3s linear;
+        -ms-transition: 0.3s linear;
+        -o-transition: 0.3s linear;
+        right: 0;
+    }
+    .nav-4 ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-4 a {
+        color: #fff;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-1,
+    .nav-2 {
+        display: none;
+    }
+}
