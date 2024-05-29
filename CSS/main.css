@@ -66,6 +66,7 @@ ul {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 999;
 }
 .nav-2 a {
     color: #fff;
@@ -109,7 +110,7 @@ ul {
     -o-transition: 0.4s ease;
 }
 .nav-3.active {
-    box-shadow: #255a4d;
+    background-color: #f8f4e7;
     position: fixed;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -123,6 +124,37 @@ ul {
 }
 /* END NAVBAR */
 
+/* START HERO */
+.hero {
+    padding: 60px 0;
+}
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.hero p {
+    color: #255a4d;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 22px 0;
+}
+.hero img {
+    border-radius: 40px 20px 40px 20px;
+    -webkit-border-radius: 40px 20px 40px 20px;
+    -moz-border-radius: 40px 20px 40px 20px;
+    -ms-border-radius: 40px 20px 40px 20px;
+    -o-border-radius: 40px 20px 40px 20px;
+    /* height: 500px; */
+    object-fit: cover;
+}
+.hero .arrow {
+    position: absolute;
+    top: -50px;
+    left: -40px;
+}
+/* END HERO */
+
 /* MEDIA 991px */
 @media (max-width: 991px) {
     .nav-3,
@@ -130,7 +162,7 @@ ul {
         display: block;
     }
     .nav-4 {
-        background-color: #255a4d71;
+        background-color: #255a4dd6;
         position: fixed;
         top: 0;
         display: flex;
@@ -161,6 +193,9 @@ ul {
         color: #fff;
         font-size: 14px;
     }
+    .hero .arrow {
+        display: none;
+    }
 }
 
 @media (max-width: 991px) {
@@ -168,4 +203,42 @@ ul {
     .nav-2 {
         display: none;
     }
+}
+
+/* MEDIA  568 */
+@media (max-width: 568px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero p {
+        font-size: 19px;
+    }
+}
+
+.donation {
+    position: fixed;
+    top: 300px;
+    right: 0;
+    background-color: #de5a0b;
+    padding: 10px;
+    border-radius: 8px 0px 0px 8px;
+    -webkit-border-radius: 8px 0px 0px 8px;
+    -moz-border-radius: 8px 0px 0px 8px;
+    -ms-border-radius: 8px 0px 0px 8px;
+    -o-border-radius: 8px 0px 0px 8px;
+    width: 110px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.donation span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-4.active ~ .donation {
+    display: none;
 }
