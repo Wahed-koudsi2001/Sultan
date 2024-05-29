@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="CSS/all.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/main.css">
@@ -156,8 +161,10 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-12 col-md-5 here-image">
-                    <h1>اصنع الفرق مع جمعية <br> الأفلاج الخيرية</h1>
-                    <p>جمعية الأفلاج الخيرية تهدف الى تقديم الدعم و المساعدة من خلال تقديم المشاريع والبرامج والأنشطة
+                    <h1 class="text-center text-md-end">اصنع الفرق مع جمعية <br class="d-none d-md-block"> الأفلاج
+                        الخيرية</h1>
+                    <p class="text-center text-md-end">جمعية الأفلاج الخيرية تهدف الى تقديم الدعم و المساعدة من خلال
+                        تقديم المشاريع والبرامج والأنشطة
                         الخيرية التي تسهم في خدمة
                         المجتمع وتطويره والرقي به .</p>
                     <button class="wahed-btn">انضم كمتطوع</button>
@@ -191,13 +198,13 @@
         <section class="aspirations">
             <h3>تطلعاتنا</h3>
             <p>نسعى دائما لنكون في ريادة المتبرعين و المساعدين للمجتمع</p>
-            <div class="row gap-5 justify-content-center mt-5">
-                <div class="col box">
+            <div class="row gy-5 justify-content-center mt-5">
+                <div class="col-lg-4 col-12 box">
                     <img src="Images/eco.png" alt="icon" class="img-fluid">
                     <h5>رئيتنا</h5>
                     <p>الريادة في تقديم المساعدات الخيرية و الاعانات المالية للمساهمة في خدمة المجتمع</p>
                 </div>
-                <div class="col box active">
+                <div class="col-lg-4 col-12 box active">
                     <img src="Images/dove.png" alt="icon" class="img-fluid">
                     <h5>رسالتنا</h5>
                     <p>تسعى الجمعية إلى مساعدة وإعانة المستفيدين من خدماتها من خلال تقديم المشاريع والبرامج والأنشطة
@@ -205,7 +212,7 @@
                         المجتمع وتطويره والرقي به
                     </p>
                 </div>
-                <div class="col box">
+                <div class="col-lg-4 col-12 box">
                     <img src="Images/charity.png" alt="icon" class="img-fluid">
                     <h5>قيمنا</h5>
                     <p>التميز والإبداع والريادة لتحقيق الحياة الكريمة للمستفيد من الخدمات الاجتماعية .</p>
@@ -383,6 +390,114 @@
     <!-- END نجاحاتنا -->
 
 
+    <!-- START مشاريعنا -->
+    <section class="our-projects">
+        <div class="container">
+            <div class="first d-flex align-items-center justify-content-between">
+                <div>
+                    <h3>مشاريعنا</h3>
+                    <p>لدينا قصة نجاح مبهرة بفضل احسانكم و تعون فريقنا المخلص لمساعدة المحتاجين</p>
+                </div>
+                <div class="d-flex icons gap-2">
+                    <div class="icons-prev i">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="icons-next i">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="wahed-row slider-boxes mt-3">
+                <div class="box">
+                    <img src="Images/project.webp" alt="img">
+                    <div class="content">
+                        <h4>مشروع الرعاية بالايتام</h4>
+                        <p>فقدان الاطفال لوالديهم في مرحلة عمرية لا يمكنهم الاعتماد على انفسهم ، فهم يحتاجون للحماية و
+                            الدعم
+                            لتعويض بعض ما فقدوه ، و من هنا انبثقت فكرة مشروع الرعاية بالايتام في جمعية الافلاج</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="details">التفاصيل</button>
+                            <button class="wahed-btn">تبرع الان</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/project.webp" alt="img">
+                    <div class="content">
+                        <h4>مشروع الرعاية بالايتام</h4>
+                        <p>فقدان الاطفال لوالديهم في مرحلة عمرية لا يمكنهم الاعتماد على انفسهم ، فهم يحتاجون للحماية و
+                            الدعم
+                            لتعويض بعض ما فقدوه ، و من هنا انبثقت فكرة مشروع الرعاية بالايتام في جمعية الافلاج</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="details">التفاصيل</button>
+                            <button class="wahed-btn">تبرع الان</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Images/project.webp" alt="img">
+                    <div class="content">
+                        <h4>مشروع الرعاية بالايتام</h4>
+                        <p>فقدان الاطفال لوالديهم في مرحلة عمرية لا يمكنهم الاعتماد على انفسهم ، فهم يحتاجون للحماية و
+                            الدعم
+                            لتعويض بعض ما فقدوه ، و من هنا انبثقت فكرة مشروع الرعاية بالايتام في جمعية الافلاج</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="details">التفاصيل</button>
+                            <button class="wahed-btn">تبرع الان</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END مشاريعنا -->
+
+
+    <!-- START WHO WE ARE -->
+    <section class="who-we-are">
+        <div class="container">
+            <svg class="arrow" width="158" height="178" viewBox="0 0 158 178" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.1">
+                    <path
+                        d="M4.78659 178C-9.77675 113.144 0.435654 -13.0361 157.792 1.09457C113.199 1.87962 20.1684 38.3598 4.78659 178Z"
+                        fill="#255A4D"></path>
+                    <circle cx="28.1614" cy="35.472" r="14.9831" transform="rotate(180 28.1614 35.472)" fill="#255A4D"
+                        stroke="#F9F5E8" stroke-width="4"></circle>
+                </g>
+            </svg>
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-7 images">
+                    <img class="one d-none d-lg-block" src="Images/image-1.jpg" alt="img">
+                    <div class="d-flex flex-column flex-xl-row">
+                        <img class="two d-none d-lg-block" src="Images/image-2.jpg" alt="img">
+                        <img class="three" src="Images/image-3.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <h4>من نحن</h4>
+                    <p>جمعية خيرية تقوم على تقديم المساعدات الخيرية او العينية و تقديم المساعدات الخيرية مالية او عينية
+                        في الحوادث والكوارث
+                        الطارئة و خدمات تعاونية مع الجهات الرسمية الاخرى لتطوير المنطقة</p>
+                    <h4>اهدافنا</h4>
+                    <p>
+                        تقديم المساعدات الخيرية أو العينية بشكل رواتب ثابتة أو مؤقتة .تقديم المساعدات الخيرية مالية أو
+                        عينية في الحوادث
+                        والكوارث الطارئة .تقديم المساعدات الممكنة للمرضى من أهالي المحافظة وتسهيل تنفيذ برامج صحية
+                        ووقاية . <br>المشاركة أو القيام بمشروعات تهدف إلى تقديم خدمات اجتماعية مختلفة ضمن حدود الرعاية
+                        الاجتماعية كبرامج رعاية
+                        المعاقين والأيتام والعجزة <br>.تقديم خدمات ثقافية وعلمية (إقامة مراكز صيفية وحلقات قران ودورات
+                        علمية ومحاضرات) وبث الوعي
+                        والثقافة في المجتمع <br>.تقديم خدمات تعاونية مع الجهات الرسمية الأخرى لتطوير المنطقة ودراسة
+                        برامج
+                        الخدمات بها
+                    </p>
+                    <button class="wahed-btn">معرفة المزيد</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END WHO WE ARE -->
 
 
     <!-- FIXED BAR -->
@@ -395,6 +510,9 @@
         </svg>
     </div>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>

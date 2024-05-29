@@ -7,7 +7,6 @@
 body {
     background-color: #f8f4e7;
     font-family: "IBM Plex Sans Arabic", sans-serif;
-    height: 3000px;
 }
 ul {
     list-style: none;
@@ -293,6 +292,145 @@ ul {
 }
 /* END our-success */
 
+/* START our-projects */
+.our-projects .container {
+    overflow: hidden;
+}
+.our-projects .first h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.our-projects .first p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+.our-projects .first .icons .i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: #fff;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.our-projects .wahed-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.our-projects .wahed-row .box {
+    border: 1px solid var(--main-color);
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+.our-projects .wahed-row .box .content {
+    padding: 16px;
+}
+.our-projects .wahed-row .box .content h4 {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--main-color);
+    margin-bottom: 12px;
+}
+.our-projects .wahed-row .box .content p {
+    font-size: 16px;
+    color: var(--main-color);
+    font-weight: 400;
+}
+.our-projects .wahed-row .box .content .details {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    padding: 7px 10px;
+    color: var(--main-color);
+}
+.our-projects .wahed-row .box .content .wahed-btn {
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    width: fit-content;
+    padding: 0 50px;
+}
+.our-projects .wahed-row .box img {
+    width: 100%;
+    height: 229px;
+    object-fit: cover;
+}
+/* END our-projects */
+
+/* START who-we-are */
+.who-we-are {
+    margin-top: 150px;
+}
+.who-we-are .images .one {
+    width: 456px;
+    height: 212px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.who-we-are .images .two {
+    width: 237px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-left: 10px;
+}
+.who-we-are .images .three {
+    width: 337px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.who-we-are h4 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.who-we-are p {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 2;
+    color: var(--main-color);
+    margin-bottom: 25px;
+}
+.who-we-are .arrow {
+    position: relative;
+}
+.who-we-are .container {
+    position: relative;
+}
+.who-we-are .arrow {
+    position: absolute;
+    left: 0;
+    top: -100px;
+}
+/* END who-we-are */
+
 /* MEDIA 991px */
 @media (max-width: 991px) {
     .nav-3,
@@ -300,7 +438,7 @@ ul {
         display: block;
     }
     .nav-4 {
-        background-color: #255a4dd6;
+        background-color: #255a4df2;
         position: fixed;
         top: 0;
         display: flex;
@@ -321,6 +459,7 @@ ul {
         -ms-transition: 0.3s linear;
         -o-transition: 0.3s linear;
         right: 0;
+        z-index: 999;
     }
     .nav-4 ul {
         display: flex;
@@ -335,8 +474,8 @@ ul {
         display: none;
     }
     .cta-aspirations {
-        height: 195px;
-        top: -155px;
+        height: 200px;
+        top: -180px;
         text-align: center;
     }
     .cta-aspirations p {
@@ -345,12 +484,41 @@ ul {
     .our-success .wahed-row {
         grid-template-columns: repeat(2, 1fr);
     }
+    .our-projects .wahed-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .who-we-are .images .three {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
-
+@media (max-width: 1199px) {
+    .who-we-are .images .one,
+    .who-we-are .images .two,
+    .who-we-are .images .three {
+        width: 100%;
+    }
+    .who-we-are .images .two {
+        margin-bottom: 10px;
+    }
+}
 @media (max-width: 991px) {
     .nav-1,
     .nav-2 {
         display: none;
+    }
+}
+
+/* MEDIA  768 */
+@media (max-width: 768px) {
+    .our-success .wahed-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our-projects .wahed-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero .wahed-btn {
+        width: 100%;
     }
 }
 
@@ -362,10 +530,8 @@ ul {
     .hero p {
         font-size: 19px;
     }
-}
-@media (max-width: 768px) {
-    .our-success .wahed-row {
-        grid-template-columns: repeat(1, 1fr);
+    .aspirations {
+        padding: 60px;
     }
 }
 .donation {
