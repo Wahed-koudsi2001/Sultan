@@ -138,10 +138,7 @@ h6 {
 .nav-4 {
     display: none;
 }
-nav a.active {
-    font-weight: bold;
-    font-size: 22px;
-}
+
 /* END NAVBAR */
 
 /* START HERO */
@@ -596,6 +593,9 @@ nav a.active {
 /* END banks */
 
 /* START pros */
+.pros .main {
+    background-color: var(--main-color);
+}
 .pros .main-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -665,6 +665,40 @@ nav a.active {
     color: #fff;
 }
 /* END pros */
+
+/* START government_and_transparency */
+.government_and_transparency .wahed-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.government_and_transparency .wahed-row li {
+    background-color: var(--main-color);
+    width: 100%;
+    padding: 16px 32px 20px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+.government_and_transparency .wahed-row li span {
+    font-weight: 600;
+    font-size: 20px;
+}
+.government_and_transparency .wahed-row li button {
+    border: none;
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    padding: 5px 16px;
+}
+/* END government_and_transparency */
 
 /* START FOOTER */
 footer {
@@ -822,6 +856,9 @@ footer h6 {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
+    .government_and_transparency .wahed-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media (max-width: 1199px) {
     .who-we-are .images .one,
@@ -850,6 +887,9 @@ footer h6 {
     }
     .hero .wahed-btn {
         width: 100%;
+    }
+    .government_and_transparency .wahed-row {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
