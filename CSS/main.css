@@ -116,6 +116,12 @@ h6 {
     -moz-transition: 0.4s ease;
     -ms-transition: 0.4s ease;
     -o-transition: 0.4s ease;
+    background-color: #f8f4e7;
+    position: fixed;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 99999;
+    top: 0;
 }
 .nav-3.active {
     background-color: #f8f4e7;
@@ -561,7 +567,7 @@ nav a.active {
     font-weight: 700;
     color: var(--main-color);
 }
-.banks .container {
+.banks .main {
     background-color: var(--main-color);
     border-radius: 40px;
     -webkit-border-radius: 40px;
@@ -588,6 +594,77 @@ nav a.active {
     margin-bottom: 12px;
 }
 /* END banks */
+
+/* START pros */
+.pros .main-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.pros .main-2 img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.pros .main-2 h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+.pros .main-2 p {
+    font-size: 19px;
+    font-weight: 400;
+}
+.pros button {
+    background-color: #de5a0b;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    width: 185px;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    margin: 30px auto 15px;
+    font-weight: 600;
+}
+.pros ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px !important;
+    gap: 20px;
+}
+.pros ul li {
+    border: 1px solid var(--main-color);
+    padding: 10px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    width: 180px;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.pros ul li.active {
+    background-color: var(--main-color);
+    color: #fff;
+}
+/* END pros */
 
 /* START FOOTER */
 footer {
@@ -667,6 +744,10 @@ footer h6 {
 
 /* MEDIA 991px */
 @media (max-width: 991px) {
+    .hero,
+    .banks {
+        padding-top: 150px;
+    }
     .nav-3,
     .nav-4 {
         display: block;
@@ -735,6 +816,11 @@ footer h6 {
     }
     .cta .container .main input[type="email"] {
         margin: 0;
+    }
+    .pros .main-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
     }
 }
 @media (max-width: 1199px) {
