@@ -25,3 +25,31 @@ document.querySelector('.bars').addEventListener('click', function () {
         icon.classList.add('fa-bars');
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logos = document.querySelector('.logos');
+    const prev = document.querySelector('.icons-prev');
+    const next = document.querySelector('.icons-next');
+    const logoWidth = logos.querySelector('img').clientWidth;
+    const totalLogos = logos.children.length;
+    const visibleLogos = 4;
+    let scrollAmount = 0;
+
+    next.addEventListener('click', () => {
+        if (scrollAmount <= -(totalLogos - visibleLogos) * logoWidth) {
+            scrollAmount = 0;
+        } else {
+            scrollAmount -= logoWidth;
+        }
+        logos.style.transform = `translateX(${scrollAmount}px)`;
+    });
+
+    prev.addEventListener('click', () => {
+        if (scrollAmount >= 0) {
+            scrollAmount = -(totalLogos - visibleLogos) * logoWidth;
+        } else {
+            scrollAmount += logoWidth;
+        }
+        logos.style.transform = `translateX(${scrollAmount}px)`;
+    });
+});
