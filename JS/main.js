@@ -53,3 +53,45 @@ document.addEventListener('DOMContentLoaded', () => {
         logos.style.transform = `translateX(${scrollAmount}px)`;
     });
 });
+
+const swiper = new Swiper('.mySwiper', {
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+    },
+    breakpoints: {
+        300: {
+            slidesPerView: 2
+        },
+        768: {
+            slidesPerView: 3
+        },
+        991: {
+            slidesPerView: 5
+        },
+    },
+    grabCursor: true,
+    loop: true
+});
+
+const swiper2 = new Swiper('.mySwiper-2', {
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        991: {
+            slidesPerView: 3
+        },
+    },
+    grabCursor: true,
+    loop: true
+});
