@@ -667,6 +667,9 @@ h6 {
 /* END pros */
 
 /* START government_and_transparency */
+.government_and_transparency h3 {
+    color: var(--main-color);
+}
 .government_and_transparency .wahed-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -681,6 +684,7 @@ h6 {
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
+    text-align: center;
 }
 .government_and_transparency .wahed-row li span {
     font-weight: 600;
@@ -697,8 +701,105 @@ h6 {
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
     padding: 5px 16px;
+    margin-top: 10px;
 }
 /* END government_and_transparency */
+
+/* START committees_and_councils */
+.committees_and_councils,
+.board_of_directors {
+    padding: 70px 0 120px;
+}
+.committees_and_councils h3 {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 32px;
+}
+.committees_and_councils .main {
+    background-color: var(--main-color);
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    padding: 32px;
+}
+.committees_and_councils .under-main {
+    background-color: #2c6355;
+    padding: 32px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+.committees_and_councils .under-main ul h4 {
+    color: #fff;
+    font-size: 24px;
+    color: #f9f5e8;
+    margin-bottom: 20px;
+}
+.committees_and_councils .under-main ul li {
+    color: #f9f5e8;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.committees_and_councils .under-main .border-right {
+    border-right: 2px solid #fff;
+    padding-right: 30px;
+}
+/* END committees_and_councils */
+
+/* START board_of_directors */
+.board_of_directors h2 {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+.board_of_directors .container {
+    background-color: var(--main-color);
+    color: #f9f5e8;
+    padding: 16px;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+.board_of_directors ul li {
+    background-color: #2c6355;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    padding: 16px;
+}
+.board_of_directors ul li img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.board_of_directors ul li .name {
+    margin-bottom: 15px;
+}
+.board_of_directors ul li .name,
+.board_of_directors ul li .title {
+    font-size: 18px;
+    font-weight: 500;
+}
+.board_of_directors .under-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+/* END board_of_directors */
 
 /* START FOOTER */
 footer {
@@ -779,8 +880,11 @@ footer h6 {
 /* MEDIA 991px */
 @media (max-width: 991px) {
     .hero,
-    .banks {
-        padding-top: 150px;
+    .banks,
+    .committees_and_councils,
+    .government_and_transparency,
+    .board_of_directors {
+        padding-top: 150px !important;
     }
     .nav-3,
     .nav-4 {
@@ -859,6 +963,9 @@ footer h6 {
     .government_and_transparency .wahed-row {
         grid-template-columns: repeat(2, 1fr);
     }
+    .board_of_directors .under-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media (max-width: 1199px) {
     .who-we-are .images .one,
@@ -889,6 +996,15 @@ footer h6 {
         width: 100%;
     }
     .government_and_transparency .wahed-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .committees_and_councils .under-main .border-right {
+        border-top: 2px solid #fff;
+        padding-top: 30px;
+        border-right: 0;
+        padding: 20px 0;
+    }
+    .board_of_directors .under-main {
         grid-template-columns: repeat(1, 1fr);
     }
 }
