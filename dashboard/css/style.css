@@ -155,6 +155,39 @@ main .container ul li.active {
     background-color: var(--main-color);
     color: #fff;
 }
+main .container ul.boxes li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 223px;
+    gap: 20px;
+    padding: 32px;
+}
+main .container ul.boxes li .title {
+    font-size: 24px;
+    font-weight: 700;
+}
+main .container ul.boxes li .number {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+main .container ul.boxes li button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    outline: none;
+    font-size: 18px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    padding: 5px 10px;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+}
 
 @media (max-width: 991px) {
     main {
@@ -193,7 +226,7 @@ main .container ul li.active {
         display: block;
         position: absolute;
         right: 0;
-        width: 25%;
+        width: 40%;
         z-index: 999;
     }
 }
