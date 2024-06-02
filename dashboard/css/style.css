@@ -65,7 +65,7 @@ nav .container button {
 /* START MAIN */
 main {
     display: grid;
-    grid-template-columns: 240px 75%;
+    grid-template-columns: 240px 1fr;
     gap: 0 20px;
 }
 main .sidebar {
@@ -94,7 +94,7 @@ main .sidebar ul li a {
     font-size: 20px;
 }
 main .container {
-    padding: 40px;
+    padding: 40px 0 40px 20px;
 }
 main .container .first {
     display: flex;
@@ -189,6 +189,174 @@ main .container ul.boxes li button {
     cursor: pointer;
 }
 
+main .container .second {
+    margin-top: 20px;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+main .container .second div {
+    display: flex;
+    justify-content: space-between;
+}
+main .container .second div span {
+    width: 100%;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+}
+main .container .third {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    background-color: var(--main-color);
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+main .container .third div {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #3e7667;
+    padding-bottom: 5px;
+}
+main .container .third div:last-child {
+    border-bottom: none;
+}
+main .container .third div span {
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+}
+main .container .third div .btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+main .container .third div .btns button {
+    width: 100px;
+    color: var(--main-color);
+    padding: 10px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    color: var(--main-color);
+    font-size: 12px;
+}
+main .container .third div .btns button.reject {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.second-table {
+    margin-top: 20px;
+    background-color: var(--main-color);
+    color: #f9f5e8;
+    border-radius: 16px;
+    height: 50px;
+    line-height: 50px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    padding-right: 20px;
+    display: grid;
+    grid-template-columns: 25% 15% 60%;
+}
+.second-table span {
+    font-weight: 500;
+    font-size: 20px;
+}
+.third-table {
+    margin-top: 20px;
+    background-color: var(--main-color);
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    color: #f9f5e8;
+}
+.third-table .box {
+    display: grid;
+    grid-template-columns: 25% 15% 60%;
+    border-bottom: 1px solid #3e7667;
+    align-items: center;
+    padding: 10px;
+}
+.third-table .box:last-child {
+    border-bottom: none;
+}
+.third-table .box .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.third-table .box .info div {
+    display: flex;
+    flex-direction: column;
+}
+.third-table .box .info div .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+.third-table .box .info div .city {
+    font-size: 16px;
+    font-weight: 400;
+}
+.third-table .box .job {
+    font-size: 20px;
+    font-weight: 500;
+}
+.third-table .box .message {
+    font-weight: 400;
+    display: flex;
+    gap: 10px;
+}
+.third-table .box .message p {
+    font-size: 13px;
+    color: #f9f5e8;
+    width: 85%;
+}
+.third-table .box .message button {
+    width: 15%;
+    background-color: #f9f5e8;
+    color: var(--main-color);
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    cursor: pointer;
+}
+.third-table .box img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
 @media (max-width: 991px) {
     main {
         grid-template-columns: 100%;
@@ -204,6 +372,9 @@ main .container ul.boxes li button {
     }
     nav .container {
         padding: 0 30px;
+    }
+    main .container {
+        padding: 40px 20px;
     }
     main .container ul li {
         width: calc((100% / 2) - 30px);
@@ -229,6 +400,19 @@ main .container ul.boxes li button {
         width: 40%;
         z-index: 999;
     }
+    main .container .second {
+        height: fit-content;
+    }
+    main .container .second div,
+    main .container .third div {
+        flex-wrap: wrap;
+    }
+    main .container .third div {
+        gap: 10px;
+    }
+    main .container .third div .btns {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -241,5 +425,23 @@ main .container ul.boxes li button {
     }
     main .container ul li {
         width: 100%;
+    }
+    .second-table {
+        grid-template-columns: 100%;
+        height: fit-content;
+    }
+    .third-table .box {
+        grid-template-columns: 100%;
+    }
+    .third-table .box .message {
+        flex-direction: column;
+    }
+    .third-table .box .message p {
+        width: 100%;
+    }
+    .third-table .box .message button {
+        padding: 10px 0;
+        width: 50%;
+        margin: 10px auto;
     }
 }

@@ -301,7 +301,7 @@ h6 {
 }
 .our-success .wahed-row .box .title {
     font-size: 22px;
-    font-size: 600;
+    font-weight: 600;
     color: var(--main-color);
 }
 .our-success .wahed-row .box .details {
