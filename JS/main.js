@@ -95,3 +95,13 @@ const swiper2 = new Swiper('.mySwiper-2', {
     grabCursor: true,
     loop: true
 });
+
+AOS.init();
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Set a timeout to hide the preloader after 2 seconds
+    setTimeout(function () {
+        document.getElementById('preloader-active').style.display = 'none';
+        document.body.classList.remove('no-scroll'); // Re-enable scrolling
+    }, 2000); // 2000 milliseconds = 2 seconds
+});

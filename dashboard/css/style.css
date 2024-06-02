@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+    --main-color: #255a4d;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    background-color: #f9f5e8;
+}
+
+/* START NAVBAR */
+nav {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--main-color);
+}
+nav .container {
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .container div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+nav .container .logo {
+    width: 85px;
+}
+nav .container .bars {
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+nav .container h2 {
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--main-color);
+}
+nav .container button {
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    width: 185px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+/* END NAVBAR */
+
+/* START MAIN */
+main {
+    display: grid;
+    grid-template-columns: 240px 75%;
+    gap: 0 20px;
+}
+main .sidebar {
+    background-color: var(--main-color);
+    padding: 40px 20px 0 0;
+    height: calc(100vh - 92px);
+}
+main .sidebar ul li {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+main .sidebar ul li.active::before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    width: 4px;
+    height: 100%;
+    background-color: #fff;
+}
+main .sidebar ul li a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+}
+main .container {
+    padding: 40px;
+}
+main .container .first {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+main .container .first h3 {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 700;
+}
+main .container .first input {
+    width: 450px;
+    background-color: #255a4d66;
+    padding: 0 16px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    height: 48px;
+    border: none;
+    outline: none;
+    padding-right: 40px;
+}
+main .container .first div {
+    position: relative;
+}
+main .container .first div svg {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+main .container ul {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main .container ul li {
+    padding: 10px 16px;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    width: calc((100% / 4) - 30px);
+    font-weight: 700;
+    font-size: 21px;
+    cursor: pointer;
+}
+main .container ul li.active {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    main {
+        grid-template-columns: 100%;
+    }
+    .sidebar {
+        position: absolute;
+        right: -1000px;
+        transition: 0.2s linear;
+        -webkit-transition: 0.2s linear;
+        -moz-transition: 0.2s linear;
+        -ms-transition: 0.2s linear;
+        -o-transition: 0.2s linear;
+    }
+    nav .container {
+        padding: 0 30px;
+    }
+    main .container ul li {
+        width: calc((100% / 2) - 30px);
+    }
+    main .container .first h3 {
+        text-align: center;
+        width: 100%;
+    }
+    main .container .first div {
+        width: 100%;
+    }
+    main .container .first input {
+        width: 100%;
+    }
+    nav .container .bars {
+        display: block;
+        z-index: 9999;
+    }
+    main .sidebar.active {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 25%;
+        z-index: 999;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .container h2 {
+        display: none;
+    }
+
+    main .container {
+        padding: 40px 20px;
+    }
+    main .container ul li {
+        width: 100%;
+    }
+}
