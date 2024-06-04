@@ -105,3 +105,4 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove('no-scroll'); // Re-enable scrolling
     }, 2000); // 2000 milliseconds = 2 seconds
 });
+
