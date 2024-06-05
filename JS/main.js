@@ -106,3 +106,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000); // 2000 milliseconds = 2 seconds
 });
 
+document.addEventListener('aos:in', ({ detail }) => {
+    if (detail.classList.contains('counterup-nums')) {
+        const countUp = new CountUp(detail, detail.innerText);
+        if (!countUp.error) {
+            countUp.start();
+        } else {
+            console.error(countUp.error);
+        }
+    }
+});
