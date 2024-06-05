@@ -106,13 +106,48 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000); // 2000 milliseconds = 2 seconds
 });
 
-document.addEventListener('aos:in', ({ detail }) => {
-    if (detail.classList.contains('counterup-nums')) {
-        const countUp = new CountUp(detail, detail.innerText);
-        if (!countUp.error) {
-            countUp.start();
-        } else {
-            console.error(countUp.error);
+
+let counters = document.querySelectorAll(".counter");
+let statistics = document.getElementById("our-success");
+let activated = false;
+
+function startCounter() {
+    counters.forEach(counter => {
+        counter.innerHTML = 0;
+        let count = 0;
+        const target = parseInt(counter.dataset.count);
+        const duration = 3000; // 3 seconds
+        const increment = target / (duration / 50); // Update every 50 milliseconds
+
+        function updateCount() {
+            if (count < target) {
+                count += increment;
+                counter.innerHTML = Math.ceil(count);
+                setTimeout(updateCount, 50);
+            } else {
+                counter.innerHTML = target;
+            }
         }
+        updateCount();
+        activated = true;
+    });
+}
+
+function resetCounter() {
+    counters.forEach(counter => {
+        counter.innerHTML = 0;
+    });
+    activated = false;
+}
+
+window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const statisticsOffset = statistics.offsetTop;
+    const windowHeight = window.innerHeight;
+
+    if (scrollPosition > statisticsOffset - windowHeight && !activated) {
+        startCounter();
+    } else if (scrollPosition < statisticsOffset - windowHeight || scrollPosition === 0) {
+        resetCounter();
     }
 });
